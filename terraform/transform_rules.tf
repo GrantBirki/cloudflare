@@ -12,7 +12,7 @@ resource "cloudflare_ruleset" "security_response_headers" {
       # Note: headers must be in alphabetical order or you will have endless terraform plans changing state
       headers {
         name      = "Content-Security-Policy"
-        value     = "img-src 'self' https://assets.tarkov.dev https://avatars.githubusercontent.com data: https://images.weserv.nl; frame-src 'self' https://discord.com https://challenges.cloudflare.com; style-src 'self' https://tarkov.dev https://discord.com 'unsafe-inline'; font-src 'self' https://tarkov.dev https://discord.com; form-action 'self'; script-src 'self' *.cloudflareinsights.com https://challenges.cloudflare.com wombatstats.com discord.com js-agent.newrelic.com bam.nr-data.net bam-cell.nr-data.net 'unsafe-inline'; object-src 'none'; base-uri 'self'; "
+        value     = "img-src 'self' https://assets.tarkov.dev https://avatars.githubusercontent.com data: https://images.weserv.nl https://imagemagic.tarkov.dev; frame-src 'self' https://discord.com https://challenges.cloudflare.com; style-src 'self' https://tarkov.dev https://discord.com 'unsafe-inline'; font-src 'self' https://tarkov.dev https://discord.com; form-action 'self'; script-src 'self' *.cloudflareinsights.com https://challenges.cloudflare.com wombatstats.com discord.com js-agent.newrelic.com bam.nr-data.net bam-cell.nr-data.net 'unsafe-inline'; object-src 'none'; base-uri 'self'; "
         operation = "set"
       }
       headers {
